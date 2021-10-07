@@ -1,5 +1,5 @@
 syn keyword ssStatement return 
-syn keyword ssRepeat for 
+syn keyword ssRepeat for in
 syn keyword ssConditional if else switch
 syn keyword ssKeyword try import 
 
@@ -26,8 +26,12 @@ hi def link ssDeclare Keyword
 syn match   ssCharacter /'.'/
 hi def link ssCharacter Character
 
-syn keyword ssFunc func
-hi def link ssFunc Function
+syn match   ssFuncCall "\w\(\w\)*("he=e-1,me=e-1
+syn keyword ssFunc func nextgroup=ssFuncName skipwhite skipempty
+
+hi def link ssFuncCall Function
+hi def link ssFunc     Function
+hi def link ssFuncName Function
 
 syn match ssNumber "\v<\d+>"
 hi def link ssNumber Number
