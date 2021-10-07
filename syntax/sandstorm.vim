@@ -31,9 +31,9 @@ hi def link ssCharacter Character
 syn match   ssFuncCall "\w\(\w\)*("he=e-1,me=e-1
 syn keyword ssFunc func nextgroup=ssFuncName skipwhite skipempty
 
-hi def link ssFuncCall Identifier 
-hi def link ssFunc     Function 
-hi def link ssFuncName Identifier 
+hi def link ssFuncCall Function 
+hi def link ssFunc     Keyword 
+hi def link ssFuncName Function 
 
 syn match ssNumber "\v<\d+>"
 hi def link ssNumber Number
