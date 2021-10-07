@@ -23,11 +23,17 @@ hi def link ssPredefined Boolean
 syn keyword ssDeclare let const
 hi def link ssDeclare Keyword
 
-syn match   ssCharacter /b'.'/
+syn match   ssCharacter /'.'/
 hi def link ssCharacter Character
 
 syn keyword ssFunc func
 hi def link ssFunc Function
+
+syn match ssNumber "\v<\d+>"
+hi def link ssNumber Number
+
+syn region ssString start=/"/ skip=/\\"/ end=/"/
+hi def link ssString String
 
 let b:current_syntax = "sandstorm"
 
