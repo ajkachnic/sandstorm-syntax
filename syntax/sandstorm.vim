@@ -20,7 +20,7 @@ syn keyword ssPredefined nil
 hi def link ssBool Boolean
 hi def link ssPredefined Boolean
 
-syn keyword ssDeclare let const nextgroup=ssDeclareName
+syn keyword ssDeclare let const
 
 hi def link ssDeclare Keyword
 hi def link ssDeclareName Identifier 
