@@ -28,10 +28,10 @@ hi def link ssDeclareName Identifier
 syn match   ssCharacter /'.'/
 hi def link ssCharacter Character
 
-# syn match   ssFuncCall "\w\(\w\)*("he=e-1,me=e-1
+syn match   ssFuncCall "\w\(\w\)*("he=e-1,me=e-1
 syn keyword ssFunc func nextgroup=ssFuncName skipwhite skipempty
 
-# hi def link ssFuncCall Identifier 
+hi def link ssFuncCall Identifier 
 hi def link ssFunc     Function 
 hi def link ssFuncName Identifier 
 
