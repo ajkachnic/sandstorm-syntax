@@ -26,7 +26,7 @@ hi def link ssDeclare Keyword
 syn match   ssCharacter /'.'/
 hi def link ssCharacter Character
 
-syn match   ssFuncCall "\w\(\w\)*("he=e-1,me=e-1
+syn match   ssFuncCall "\w\(\w\)*("
 syn keyword ssFunc func nextgroup=ssFuncName skipwhite skipempty
 
 hi def link ssFuncCall Function
