@@ -1,14 +1,14 @@
 syn keyword ssStatement return 
 syn keyword ssRepeat for in
 syn keyword ssConditional if else switch
-syn keyword ssKeyword try import 
+syn keyword ssKeyword try import struct self
 
 hi def link     ssStatement         Statement
 hi def link     ssConditional       Conditional
 hi def link     ssRepeat            Repeat
 hi def link     ssKeyword           Keyword
 
-syn keyword ssType void string char
+syn keyword ssType void string char bool
 syn keyword ssIntType u8 u16 u32 u64 i8 i16 i32 i64 int uint
 
 hi def link ssType    Type
@@ -40,6 +40,13 @@ hi def link ssNumber Number
 
 syn region ssString start=/"/ skip=/\\"/ end=/"/
 hi def link ssString String
+
+
+syn region ssCommentLine start="//" end="$" contains=ssTodo,@Spell
+hi def link ssCommentLine   Comment
+
+syn keyword ssTodo contained TODO FIXME XXX NB NOTE
+hi def link ssTodo Todo
 
 let b:current_syntax = "sandstorm"
 
